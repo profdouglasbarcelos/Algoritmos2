@@ -1,5 +1,5 @@
 # C-Cpp
-Exemplos de código criados durante as aulas de C/C++.
+Exemplos de código criados durante as aulas de C/C++ com a turma da 4ª Etapa de 2018 na unidade Osório.
 
 ## Pré Requisitos
 
