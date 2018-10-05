@@ -1,5 +1,7 @@
 # C-Cpp
 Exemplos de código criados durante as aulas de C/C++.
+Turma: 4ª etapa 2018
+Unidade: Ângelo Sampaio (Batel)
 
 ## Pré Requisitos
 
