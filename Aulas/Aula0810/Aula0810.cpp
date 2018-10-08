@@ -22,6 +22,10 @@ bool d; // booleano (verdadeiro/falso) (true/false)
 
 int main()
 {
+	// variavel local 
+	// (visivel somente nesta funcao, a partir dessa linha)
+	int  e; 
+
     return 0;
 }
 
