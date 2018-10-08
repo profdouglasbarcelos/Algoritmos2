@@ -45,7 +45,7 @@ int main()
 
 	printf("%i + %i = %i\n", 500, 600, 500 + 600);
 
-	printf(" Por algum acaso esqueci o valor daqui: %i\n");
+	printf("Por algum acaso esqueci o valor daqui: %i\n");
 
 	a = 150;
 	e = 275;
@@ -53,6 +53,19 @@ int main()
 	int f = a + e;
 
 	printf("O resultado da soma eh: %i\n", f);
+
+	// leitura SCANF / SCANF_S
+	scanf_s("%i", &f);
+
+	printf("\nVoce digitou %i\n", f); // verificacao
+
+
+	
+	printf("Digite um valor real (float): ");
+	
+	scanf_s("%f", &b);
+
+	printf("\nVoce digitou %f\n", b);
 
 	system("pause");
 
