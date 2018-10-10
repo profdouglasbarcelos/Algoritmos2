@@ -2,10 +2,17 @@
 //
 
 #include "stdafx.h"
+#include <stdlib.h>
 
+void HelloWorld()
+{
+	printf("Hello world!\n");
+}
 
 int main()
 {
+	HelloWorld();
+	system("pause");
     return 0;
 }
 
