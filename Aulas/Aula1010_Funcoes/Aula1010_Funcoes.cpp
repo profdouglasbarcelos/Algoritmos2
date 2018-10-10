@@ -33,8 +33,8 @@ int main()
 	int primeiroValor = LerValorInteiro();
 	int segundoValor = LerValorInteiro();
 
-	int d = Soma2Valores(primeiroValor, segundoValor);
-	printf("\tResultado: %i\n", d);
+	int resultado = Soma2Valores(primeiroValor, segundoValor);
+	printf("\tResultado: %i\n", resultado);
 
 	system("pause");
     return 0;
