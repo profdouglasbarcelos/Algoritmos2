@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include <stdlib.h>
-
+#include <locale.h>
 
 float soma(float a, float b) {
 	float resultsoma = a + b;
@@ -26,6 +26,8 @@ float sub(float a, float b) {
 }
 
 int main(){
+	
+	setlocale(LC_ALL,"portuguese");
 
 	float a, b;
 
