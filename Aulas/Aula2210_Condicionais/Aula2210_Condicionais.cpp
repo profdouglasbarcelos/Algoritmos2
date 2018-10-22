@@ -98,6 +98,46 @@ void ImprimeValoresMaioresQueMedia(float a, float b, float c, float d)
 	}
 }
 
+void InformarParOuImpar(int a)
+{
+	if((a%2==0)) // a%2 resto da divisao por 2
+	{ 
+		printf("Par\n");
+	}
+	else
+	{
+		printf("Impar\n");
+	}
+}
+
+void ExemploSwitch()
+{
+	printf("Escolha uma opcao:\n");
+	printf("1 - a\n2 - b\n3 - c\n4 - d\n");
+	
+	int op = 0;
+	scanf_s("%i", &op);
+
+	switch (op)
+	{
+	case 1:
+		printf("voce escolheu a\n");
+		break;
+	case 2:
+		printf("voce escolheu b\n");
+		break;
+	case 3:
+		printf("voce escolheu c\n");
+		break;
+	case 4:
+		printf("voce escolheu d\n");
+		break;
+	default:
+		printf("Opcao invalida\n");
+		break;
+	}
+}
+
 
 int main()
 {
@@ -111,12 +151,20 @@ int main()
 	printf("O maior valor encontrado foi: %i\n\n", m);*/
 
 
-	float primeiroReal = LerValorReal();
+	/*float primeiroReal = LerValorReal();
 	float segundoReal = LerValorReal();
 	float terceiroReal = LerValorReal();
 	float quartoReal = LerValorReal();
 
-	ImprimeValoresMaioresQueMedia(primeiroReal, segundoReal, terceiroReal, quartoReal);
+	ImprimeValoresMaioresQueMedia(primeiroReal, segundoReal, terceiroReal, quartoReal);*/
+
+	/*InformarParOuImpar(5);
+	InformarParOuImpar(10);
+	InformarParOuImpar(3);
+	InformarParOuImpar(6);*/
+
+	ExemploSwitch();
+
 
 	printf("\n\n");
 	system("pause");
