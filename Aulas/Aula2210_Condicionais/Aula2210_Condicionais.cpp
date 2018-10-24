@@ -138,6 +138,80 @@ void ExemploSwitch()
 	}
 }
 
+void ImprimindoRestoComSwitch()
+{
+	int valorDigitado = 0;
+
+	printf("Digite um valor inteiro: ");
+	scanf_s("%i", &valorDigitado);
+
+	int resto = valorDigitado % 5;
+
+	switch (resto)
+	{
+	case 0:
+	{
+		printf("O valor %i eh divisivel por 5", valorDigitado);
+	}
+	break;
+	case 1:
+	{
+		printf("O resto da divisao de %i por 5 eh %i", valorDigitado, resto);
+	}
+	break;
+	case 2:
+	{
+		printf("O resto da divisao de %i por 5 eh %i", valorDigitado, resto);
+	}
+	break;
+	case 3:
+	{
+		printf("O resto da divisao de %i por 5 eh %i", valorDigitado, resto);
+	}
+	break;
+	case 4:
+	{
+		printf("O resto da divisao de %i por 5 eh %i", valorDigitado, resto);
+	}
+	break;
+	}
+}
+
+void ApresentaIR()
+{
+	float salario = LerValorReal();
+	float impostoDevido = 0;
+
+	if (salario <= 1903.98)
+	{
+		printf("Isento");
+	}
+	else if (salario <= 2826.65)
+	{
+		impostoDevido = (salario * 0.075) - 142.8;
+		printf("A aliquota aplicada foi: 7.5%%, deducao: 142.80, imposto devido: %.2f", impostoDevido);
+	}
+	else if (salario <= 3715.05)
+	{
+		impostoDevido = (salario * 0.15) - 354.8;
+		printf("A aliquota aplicada foi: 15%%, deducao: 354.80, imposto devido: %.2f", impostoDevido);
+	}
+	else if (salario <= 4664.68)
+	{
+		impostoDevido = (salario * 0.225) - 636.13;
+		printf("A aliquota aplicada foi: 22.5%%, deducao: 636.13, imposto devido: %.2f", impostoDevido);
+	}
+	else
+	{
+		impostoDevido = (salario * 0.275) - 869.36;
+		printf("A aliquota aplicada foi: 27.5%%, deducao: 869.36, imposto devido: %.2f", impostoDevido);
+	}
+}
+
+
+
+
+
 
 int main()
 {
@@ -163,8 +237,10 @@ int main()
 	InformarParOuImpar(3);
 	InformarParOuImpar(6);*/
 
-	ExemploSwitch();
+	//ExemploSwitch();
+	//ImprimindoRestoComSwitch();
 
+	ApresentaIR();
 
 	printf("\n\n");
 	system("pause");
