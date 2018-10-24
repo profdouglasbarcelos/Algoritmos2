@@ -177,6 +177,11 @@ void ImprimindoRestoComSwitch()
 	}
 }
 
+float CalculaIR(float salario, float aliquota, float deducao)
+{
+	return (salario * aliquota) - deducao;
+}
+
 void ApresentaIR()
 {
 	float salario = LerValorReal();
@@ -186,25 +191,31 @@ void ApresentaIR()
 	{
 		printf("Isento");
 	}
-	else if (salario <= 2826.65)
-	{
-		impostoDevido = (salario * 0.075) - 142.8;
-		printf("A aliquota aplicada foi: 7.5%%, deducao: 142.80, imposto devido: %.2f", impostoDevido);
-	}
-	else if (salario <= 3715.05)
-	{
-		impostoDevido = (salario * 0.15) - 354.8;
-		printf("A aliquota aplicada foi: 15%%, deducao: 354.80, imposto devido: %.2f", impostoDevido);
-	}
-	else if (salario <= 4664.68)
-	{
-		impostoDevido = (salario * 0.225) - 636.13;
-		printf("A aliquota aplicada foi: 22.5%%, deducao: 636.13, imposto devido: %.2f", impostoDevido);
-	}
 	else
 	{
-		impostoDevido = (salario * 0.275) - 869.36;
-		printf("A aliquota aplicada foi: 27.5%%, deducao: 869.36, imposto devido: %.2f", impostoDevido);
+		if (salario <= 2826.65)
+		{
+			impostoDevido = CalculaIR(salario, 0.075, 142.8);
+			printf("A aliquota aplicada foi: 7.5%%, deducao: 142.80, imposto devido: %.2f", impostoDevido);
+		}
+		else
+		{
+			if (salario <= 3715.05)
+			{
+				impostoDevido = CalculaIR(salario, 0.15, 354.8);
+				printf("A aliquota aplicada foi: 15%%, deducao: 354.80, imposto devido: %.2f", impostoDevido);
+			}
+			else if (salario <= 4664.68)
+			{
+				impostoDevido = CalculaIR(salario, 0.225, 636.13);
+				printf("A aliquota aplicada foi: 22.5%%, deducao: 636.13, imposto devido: %.2f", impostoDevido);
+			}
+			else
+			{
+				impostoDevido = CalculaIR(salario, 0.275, 869.36);
+				printf("A aliquota aplicada foi: 27.5%%, deducao: 869.36, imposto devido: %.2f", impostoDevido);
+			}
+		}
 	}
 }
 
