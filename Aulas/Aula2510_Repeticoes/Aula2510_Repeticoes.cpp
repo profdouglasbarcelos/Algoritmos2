@@ -4,6 +4,60 @@
 #include "pch.h"
 #include <iostream>
 
+/*
+	Ler 5 numeros inteiros (escrevendo apenas 1 scanf)
+	Apos a leitura informar se os valores estao ou nao 
+	em ordem crescente.
+
+	Com apenas 4 variaveis?
+*/
+
+int LerNumeroInteiro()
+{
+	int a;
+
+	printf("Favor digitar um numero inteiro: ");
+	scanf_s("%i", &a);
+
+	return a;
+}
+
+
+void DetectaValoresEmOrdem()
+{
+	int i = 0; // i iterator
+	int anterior = 0, numero = 0;
+	int crescente = 1; // 1 eh crescente
+
+	while (i < 5)
+	{
+		numero = LerNumeroInteiro();
+
+		if (i != 0)
+		{
+			if (anterior >= numero)
+			{
+				crescente = 0;
+			}
+			
+		}
+		
+		anterior = numero;
+		i++;
+	}
+
+	if (crescente == 1)
+	{
+		printf("Ordem crescente");
+	}
+	else
+	{
+		printf("Nao estavam em ordem crescente");
+	}
+
+}
+
+
 int main()
 {
 
@@ -37,6 +91,13 @@ int main()
 	//	printf("%i\t", a);
 	//} while (a <= 5);
 	
+
+	
+	DetectaValoresEmOrdem();
+
+
+
+
 	printf("\n\n\n");
 	system("pause");
 }
