@@ -80,6 +80,36 @@ void InformarSeValoresEstaoEmOrdemCrescente()
 	}
 }
 
+void InformarSeValoresEstaoEmOrdemCrescente2()
+{
+	int numero = 0, anterior = 0;
+	int crescente = 1, i = 0;
+
+	while (i < 5)
+	{
+		numero = LerValorInteiro();
+
+		if (i != 0)
+		{
+			if (anterior > numero)
+			{
+				crescente = 0;
+			}
+		}
+
+		anterior = numero;
+		i++;
+	}
+
+	if (crescente == 1)
+	{
+		printf("Os valores estavam em ordem crescente");
+	}
+	else
+	{
+		printf("Os valores nao estavam em ordem crescente");
+	}
+}
 
 
 int main()
@@ -89,8 +119,8 @@ int main()
 	//printf("A: %i, B: %i\n\n", a, b);
 
 	//ImprimirSequenciaEntreInteiros();
-	InformarSeValoresEstaoEmOrdemCrescente();
-
+	//InformarSeValoresEstaoEmOrdemCrescente();
+	InformarSeValoresEstaoEmOrdemCrescente2();
 
 
 
