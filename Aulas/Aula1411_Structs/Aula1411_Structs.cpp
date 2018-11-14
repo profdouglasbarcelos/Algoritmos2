@@ -4,6 +4,28 @@
 #include "stdafx.h"
 #include <stdlib.h>
 
+struct Data
+{
+	int dia;
+	int mes;
+	int ano;
+};
+
+struct Funcionario
+{
+	struct Data dataNascimento;
+	char nome[10];
+};
+
+struct Funcionario meusFuncionarios[5];
+
+
+void SalvarDadosFuncionario(Funcionario f)
+{
+	f.dataNascimento.dia = 5;
+}
+
+
 struct Carro
 {
 	char modelo[30];
